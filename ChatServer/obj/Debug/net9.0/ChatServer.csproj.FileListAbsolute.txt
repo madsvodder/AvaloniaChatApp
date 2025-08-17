@@ -1,0 +1,14 @@
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/ChatServer
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/ChatServer.deps.json
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/ChatServer.runtimeconfig.json
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/ChatServer.dll
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/ChatServer.pdb
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.AssemblyInfoInputs.cache
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.AssemblyInfo.cs
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.csproj.CoreCompileInputs.cache
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.dll
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/refint/ChatServer.dll
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.pdb
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.genruntimeconfig.cache
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ref/ChatServer.dll
