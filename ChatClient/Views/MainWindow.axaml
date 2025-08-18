@@ -23,9 +23,13 @@
                 
                 <SplitView.Content>
                         <DockPanel>
-                                <TextBox Watermark="chat..." DockPanel.Dock="Bottom" Height="10"></TextBox>
+                                <Grid ColumnDefinitions="*,Auto" DockPanel.Dock="Bottom" >
+                                        <TextBox Watermark="chat..." Height="10" Grid.Column="0" Text="{Binding CurrentMessage}"></TextBox>
+                                        <Button Grid.Column="1" Command="{Binding SendMessageCommand}">Send</Button>
+                                </Grid>
                                 <ScrollViewer DockPanel.Dock="Top" >
                                         <StackPanel>
+                                                <ListBox ItemsSource="{Binding Messages}"></ListBox>
                                         </StackPanel>
                                 </ScrollViewer>
                         </DockPanel>

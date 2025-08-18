@@ -1,5 +1,7 @@
 using System;
 using System.Net.Sockets;
+using System.Threading.Tasks;
+using Avalonia.Data;
 using ChatApp.Net.IO;
 
 namespace ChatApp.Net;
@@ -7,10 +9,15 @@ namespace ChatApp.Net;
 public class Server
 {
     
+    // Events
+    public event Action ConnectedEvent;
+    public event Action DisconnectedEvent;
+    public event Action MsgReceivedEvent;
+    
     // Vars
-    TcpClient _client;
-    PacketBuilder _packetBuilder;
-    private PacketReader _packetReader;
+    private TcpClient _client;
+    private PacketBuilder _packetBuilder;
+    public PacketReader PacketReader;
     public Server()
     {
         _client = new TcpClient();
@@ -26,6 +33,7 @@ public class Server
         {
             // Connect to server
             _client.Connect(ip, port);
+            PacketReader = new PacketReader(_client.GetStream());
             
             // Send packet to server
             var connectPacket = new PacketBuilder();
@@ -33,8 +41,8 @@ public class Server
             connectPacket.WriteString(username);
             _client.Client.Send(connectPacket.GetPacketBytes());
             
-            // Setup packet reader to read messages
-            _packetReader = new PacketReader(_client.GetStream());
+            // read packets
+            ReadPackets();
             
             // Debug
             Console.WriteLine("Connected to server successfully.");
@@ -43,5 +51,47 @@ public class Server
         {
             Console.WriteLine("Failed to connect: " + ex.Message);
         }
+    }
+
+    public void SendMessageToServer(string message)
+    {
+        var messagePacket = new PacketBuilder();
+        messagePacket.WriteOpCode(5);
+        messagePacket.WriteString(message);
+        _client.Client.Send(messagePacket.GetPacketBytes());
+    }
+
+    private void ReadPackets()
+    {
+        Console.WriteLine("Reading packets...");
+        Task.Run((() =>
+        {
+            while (true)
+            {
+                var opcode = PacketReader.ReadByte();
+                switch (opcode)
+                {
+                    case 1:
+                        // Connected event
+                        ConnectedEvent?.Invoke();
+                    break;
+                    
+                    case 5:
+                        // Message event
+                        MsgReceivedEvent?.Invoke();
+                        Console.Write("Hey. WE HAVE RECEIVED AT MESSAGE!");
+                        break;
+                    
+                    case 10:
+                        // Disconnect event
+                        DisconnectedEvent?.Invoke();
+                        break;
+                    
+                    default:
+                        Console.WriteLine($"Unknown opcode {opcode}");
+                        break;
+                }
+            }
+        }));
     }
 }

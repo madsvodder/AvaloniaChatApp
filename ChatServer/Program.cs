@@ -13,7 +13,7 @@ class Program
     static void Main(String[] args)
     {
         // Create list for clients / users on the server
-        _clients = new List<Client>();
+        _clients = [];
         
         // Start listening for new clients
         Console.WriteLine("Listening...");
@@ -43,5 +43,31 @@ class Program
                 client.ClientSocket.Client.Send(broadcastPacket.GetPacketBytes());
             }
         }
+    }
+
+    public static void BroadcastMessage(string message)
+    {
+        foreach (var client in _clients)
+        {
+            var msgPacket = new PacketBuilder();
+            msgPacket.WriteOpCode(5);
+            msgPacket.WriteString(message);
+            client.ClientSocket.Client.Send(msgPacket.GetPacketBytes());
+        }
+    }
+    
+    public static void BroadcastDisconnect(string guid)
+    {
+        var disconnectedClient = _clients.Where(x => x.Guid.ToString() == guid).FirstOrDefault();
+        _clients.Remove(disconnectedClient);
+        foreach (var client in _clients)
+        {
+            var msgPacket = new PacketBuilder();
+            msgPacket.WriteOpCode(10);
+            msgPacket.WriteString(guid);
+            client.ClientSocket.Client.Send(msgPacket.GetPacketBytes());
+        }
+        
+        BroadcastMessage($"{disconnectedClient.Username} disconnected from the server");
     }
 }
