@@ -128,9 +128,11 @@ C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClie
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.AssemblyInfo.cs
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.csproj.CoreCompileInputs.cache
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.sourcelink.json
-C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\Avalonia\ChatClient.dll
-C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\Avalonia\ChatClient.pdb
-C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\refint\Avalonia\ChatClient.dll
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.csproj.Up2Date
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.genruntimeconfig.cache
 C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ref\ChatClient.dll
+C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\bin\Debug\net9.0\DialogHost.Avalonia.dll
+C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\bin\Debug\net9.0\MsBox.Avalonia.dll
+C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.dll
+C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\refint\ChatClient.dll
+C:\Users\Mads\RiderProjects\AvaloniaChatApp\ChatClient\obj\Debug\net9.0\ChatClient.pdb
