@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mads\\RiderProjects\\AvaloniaChatApp\\ChatClient\\ChatClient.csproj": {}
+    "/Users/madsvodder/Development/RiderProjects/ChatClient/ChatClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mads\\RiderProjects\\AvaloniaChatApp\\ChatClient\\ChatClient.csproj": {
+    "/Users/madsvodder/Development/RiderProjects/ChatClient/ChatClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mads\\RiderProjects\\AvaloniaChatApp\\ChatClient\\ChatClient.csproj",
+        "projectUniqueName": "/Users/madsvodder/Development/RiderProjects/ChatClient/ChatClient.csproj",
         "projectName": "ChatClient",
-        "projectPath": "C:\\Users\\Mads\\RiderProjects\\AvaloniaChatApp\\ChatClient\\ChatClient.csproj",
-        "packagesPath": "C:\\Users\\Mads\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mads\\RiderProjects\\AvaloniaChatApp\\ChatClient\\obj\\",
+        "projectPath": "/Users/madsvodder/Development/RiderProjects/ChatClient/ChatClient.csproj",
+        "packagesPath": "/Users/madsvodder/.nuget/packages/",
+        "outputPath": "/Users/madsvodder/Development/RiderProjects/ChatClient/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mads\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/madsvodder/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -56,23 +50,23 @@
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.3.4, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.3.4, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.3.4, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[11.3.4, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.4.0, )"
             },
             "MessageBox.Avalonia": {
               "target": "Package",
@@ -95,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -39,7 +39,8 @@ class Program
             {
                 var broadcastPacket = new PacketBuilder();
                 broadcastPacket.WriteOpCode(1);
-                broadcastPacket.WriteString($"{cli.Username} connected to the server");
+                broadcastPacket.WriteString(cli.Username);
+                broadcastPacket.WriteString(cli.Guid.ToString());
                 client.ClientSocket.Client.Send(broadcastPacket.GetPacketBytes());
             }
         }

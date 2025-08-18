@@ -17,6 +17,15 @@
                                 <TextBox Height="10" VerticalAlignment="Top" Watermark="username" Text="{Binding Username}"></TextBox>
                                 <TextBox Height="10" VerticalAlignment="Top" Watermark="ip" Text="{Binding ServerIp}"></TextBox>
                                 <Button Command="{Binding ConnectToServerCommand}">Connect</Button>
+                                <ScrollViewer>
+                                        <ListBox ItemsSource="{Binding ConnectedClients}">
+                                                <ListBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Username}"></TextBlock>
+                                                        </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                        </ListBox>
+                                </ScrollViewer>
                         </StackPanel>
                 </SplitView.Pane>
                 

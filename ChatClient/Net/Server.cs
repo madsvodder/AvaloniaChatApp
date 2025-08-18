@@ -79,7 +79,6 @@ public class Server
                     case 5:
                         // Message event
                         MsgReceivedEvent?.Invoke();
-                        Console.Write("Hey. WE HAVE RECEIVED AT MESSAGE!");
                         break;
                     
                     case 10:

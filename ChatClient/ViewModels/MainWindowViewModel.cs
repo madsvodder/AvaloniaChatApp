@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Threading;
+using ChatApp.Models;
 using ChatApp.Net;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -15,7 +17,9 @@ public partial class MainWindowViewModel : ViewModelBase
 {
 
     private Server _server;
-
+    
+    [ObservableProperty]
+    private ObservableCollection<ClientModel> _connectedClients;
     public ObservableCollection<string> Messages { get; set; }
 
     public MainWindowViewModel()
@@ -23,11 +27,33 @@ public partial class MainWindowViewModel : ViewModelBase
         _server = new Server();
 
         Messages = [];
+        _connectedClients = [];
         
         // Events
         _server.MsgReceivedEvent += MessageReceived;
+        _server.ConnectedEvent += ServerOnConnected;
+        
+    }
+
+    
+    private void ServerOnConnected()
+    {
+        var client = new ClientModel
+        {
+            Username = _server.PacketReader.ReadMessage(),
+            Guid = _server.PacketReader.ReadMessage(),
+        };
+        
+        Console.WriteLine($"Client {client.Username} was created");
+
+        if (!ConnectedClients.Any(x => x.Guid == client.Guid))
+        {
+            
+            Dispatcher.UIThread.Post(() => ConnectedClients.Add(client));
+        }
     }
     
+
     // Properties
     [ObservableProperty] private string _username = "Mads";
     [ObservableProperty] private string _serverIp = "127.0.0.1";
