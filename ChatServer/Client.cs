@@ -49,8 +49,9 @@ public class Client
             catch (Exception e)
             {
                 Console.WriteLine($"{Username} disconnected from the server");
-                ClientSocket.Close();
                 Program.BroadcastMessage($"{Username} disconnected from the server");
+                Program.BroadcastDisconnect(Guid.ToString());
+                ClientSocket.Close();
                 break;
             }
         }

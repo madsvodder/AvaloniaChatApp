@@ -32,10 +32,20 @@ public partial class MainWindowViewModel : ViewModelBase
         // Events
         _server.MsgReceivedEvent += MessageReceived;
         _server.ConnectedEvent += ServerOnConnected;
+        _server.DisconnectedEvent += ServerOnDisconnected;
         
     }
 
-    
+    private void ServerOnDisconnected()
+    {
+        var guid = _server.PacketReader.ReadMessage();
+        var user = ConnectedClients.Where(x => x.Guid == guid).FirstOrDefault();
+        
+        Dispatcher.UIThread.Post(() => ConnectedClients.Remove(user));
+
+    }
+
+
     private void ServerOnConnected()
     {
         var client = new ClientModel
