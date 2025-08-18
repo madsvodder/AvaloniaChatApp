@@ -17,9 +17,14 @@ public class PacketBuilder
 
     public void WriteString(string str)
     {
+        // Get the length of the String and write it to the stream
         var strLength = str.Length;
+        
+        // Write the length to the stream as an integer
         _stream.Write(BitConverter.GetBytes(strLength));
-        _stream.Write(Encoding.ASCII.GetBytes(str));
+        
+        // Write the message / string itself
+        _stream.Write(Encoding.UTF8.GetBytes(str));
     }
 
     public byte[] GetPacketBytes()

@@ -1,4 +1,5 @@
 using System.Net.Sockets;
+using System.Text;
 using Server.Net.IO;
 
 namespace Server;
@@ -18,7 +19,7 @@ public class Client
         _packetReader = new PacketReader(ClientSocket.GetStream());
 
         var opcode = _packetReader.ReadByte();
-        Username = _packetReader.readMessage();
+        Username = _packetReader.ReadMessage();
         
         Console.WriteLine($"{DateTime.Now} - {Username} has connected to the server");
     }

@@ -12,3 +12,4 @@
 /Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.pdb
 /Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.genruntimeconfig.cache
 /Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ref/ChatServer.dll
+/Users/madsvodder/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.sourcelink.json

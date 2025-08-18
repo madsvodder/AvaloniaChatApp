@@ -65,3 +65,4 @@
 /Users/madsvodder/RiderProjects/ChatApp/ChatClient/obj/Debug/net9.0/ChatClient.csproj.Up2Date
 /Users/madsvodder/RiderProjects/ChatApp/ChatClient/obj/Debug/net9.0/ChatClient.genruntimeconfig.cache
 /Users/madsvodder/RiderProjects/ChatApp/ChatClient/obj/Debug/net9.0/ref/ChatClient.dll
+/Users/madsvodder/RiderProjects/ChatApp/ChatClient/obj/Debug/net9.0/ChatClient.sourcelink.json

@@ -10,6 +10,7 @@ public class Server
     // Vars
     TcpClient _client;
     PacketBuilder _packetBuilder;
+    private PacketReader _packetReader;
     public Server()
     {
         _client = new TcpClient();
@@ -31,6 +32,9 @@ public class Server
             connectPacket.WriteOpCode(0);
             connectPacket.WriteString(username);
             _client.Client.Send(connectPacket.GetPacketBytes());
+            
+            // Setup packet reader to read messages
+            _packetReader = new PacketReader(_client.GetStream());
             
             // Debug
             Console.WriteLine("Connected to server successfully.");

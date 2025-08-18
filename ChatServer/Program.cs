@@ -3,6 +3,7 @@
 using System.Net;
 using System.Net.Sockets;
 using Server;
+using Server.Net.IO;
 
 class Program
 {
@@ -26,6 +27,21 @@ class Program
             _clients.Add(client);
             
             // Broadcast the connection to everyone on the server
+            BroadcastConnection();
+        }
+    }
+
+    static void BroadcastConnection()
+    {
+        foreach (var client in _clients)
+        {
+            foreach (var cli in _clients)
+            {
+                var broadcastPacket = new PacketBuilder();
+                broadcastPacket.WriteOpCode(1);
+                broadcastPacket.WriteString($"{cli.Username} connected to the server");
+                client.ClientSocket.Client.Send(broadcastPacket.GetPacketBytes());
+            }
         }
     }
 }
