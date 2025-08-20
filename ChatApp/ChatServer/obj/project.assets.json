@@ -1,0 +1,279 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "SoundFlow/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/SoundFlow.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SoundFlow.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/android-arm/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "android-arm"
+          },
+          "runtimes/android-arm64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "android-arm64"
+          },
+          "runtimes/android-x64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "android-x64"
+          },
+          "runtimes/freebsd-arm64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "freebsd-arm64"
+          },
+          "runtimes/freebsd-x64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "freebsd-x64"
+          },
+          "runtimes/ios-arm64/native/miniaudio.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "ios-arm64"
+          },
+          "runtimes/ios-arm64/native/miniaudio.framework/miniaudio": {
+            "assetType": "native",
+            "rid": "ios-arm64"
+          },
+          "runtimes/linux-arm/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libminiaudio.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libminiaudio.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libminiaudio.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm64/native/miniaudio.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/miniaudio.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/miniaudio.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SoundFlow.Extensions.WebRtc.Apm/1.0.4": {
+        "type": "package",
+        "dependencies": {
+          "SoundFlow": "1.2.0"
+        },
+        "compile": {
+          "lib/net8.0/SoundFlow.Extensions.WebRtc.Apm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SoundFlow.Extensions.WebRtc.Apm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/android-arm64/native/libwebrtc-apm.so": {
+            "assetType": "native",
+            "rid": "android-arm64"
+          },
+          "runtimes/android-x64/native/libwebrtc-apm.so": {
+            "assetType": "native",
+            "rid": "android-x64"
+          },
+          "runtimes/ios-arm64/native/libwebrtc-apm.dylib": {
+            "assetType": "native",
+            "rid": "ios-arm64"
+          },
+          "runtimes/linux-arm/native/libwebrtc-apm.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libwebrtc-apm.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libwebrtc-apm.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libwebrtc-apm.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/osx-x64/native/libwebrtc-apm.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/webrtc-apm.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/webrtc-apm.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SoundFlow/1.2.1": {
+      "sha512": "0ul16XQK10pAuqRah1nRoqJNlgB5sp/UpB9rYn9/FN2/cJ26G1RA/vzjeEIXHTOY9f4cc6VvzBdIzyILLYpGPg==",
+      "type": "package",
+      "path": "soundflow/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "SoundFlow.targets",
+        "lib/net8.0/SoundFlow.dll",
+        "lib/net8.0/SoundFlow.xml",
+        "logo.png",
+        "runtimes/android-arm/native/libminiaudio.so",
+        "runtimes/android-arm64/native/libminiaudio.so",
+        "runtimes/android-x64/native/libminiaudio.so",
+        "runtimes/freebsd-arm64/native/libminiaudio.so",
+        "runtimes/freebsd-x64/native/libminiaudio.so",
+        "runtimes/ios-arm64/native/miniaudio.framework/Info.plist",
+        "runtimes/ios-arm64/native/miniaudio.framework/miniaudio",
+        "runtimes/linux-arm/native/libminiaudio.so",
+        "runtimes/linux-arm64/native/libminiaudio.so",
+        "runtimes/linux-x64/native/libminiaudio.so",
+        "runtimes/osx-arm64/native/libminiaudio.dylib",
+        "runtimes/osx-x64/native/libminiaudio.dylib",
+        "runtimes/win-arm64/native/miniaudio.dll",
+        "runtimes/win-x64/native/miniaudio.dll",
+        "runtimes/win-x86/native/miniaudio.dll",
+        "soundflow.1.2.1.nupkg.sha512",
+        "soundflow.nuspec"
+      ]
+    },
+    "SoundFlow.Extensions.WebRtc.Apm/1.0.4": {
+      "sha512": "/mojmRD2uMY5t23bjeyU9n3bPotMdUSzOtc/Mc2X2rh1pbg0V38tJ+E9G0XuaJGzJcUo1zd3jjkz298ZbbXUcg==",
+      "type": "package",
+      "path": "soundflow.extensions.webrtc.apm/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "SoundFlow.Extensions.WebRtc.Apm.targets",
+        "lib/net8.0/SoundFlow.Extensions.WebRtc.Apm.dll",
+        "lib/net8.0/SoundFlow.Extensions.WebRtc.Apm.xml",
+        "logo.png",
+        "runtimes/android-arm64/native/libwebrtc-apm.so",
+        "runtimes/android-x64/native/libwebrtc-apm.so",
+        "runtimes/ios-arm64/native/libwebrtc-apm.dylib",
+        "runtimes/linux-arm/native/libwebrtc-apm.so",
+        "runtimes/linux-arm64/native/libwebrtc-apm.so",
+        "runtimes/linux-x64/native/libwebrtc-apm.so",
+        "runtimes/osx-arm64/native/libwebrtc-apm.dylib",
+        "runtimes/osx-x64/native/libwebrtc-apm.dylib",
+        "runtimes/win-x64/native/webrtc-apm.dll",
+        "runtimes/win-x86/native/webrtc-apm.dll",
+        "soundflow.extensions.webrtc.apm.1.0.4.nupkg.sha512",
+        "soundflow.extensions.webrtc.apm.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "SoundFlow >= 1.2.1",
+      "SoundFlow.Extensions.WebRtc.Apm >= 1.0.4"
+    ]
+  },
+  "packageFolders": {
+    "/Users/madsvodder/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/ChatServer.csproj",
+      "projectName": "ChatServer",
+      "projectPath": "/Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/ChatServer.csproj",
+      "packagesPath": "/Users/madsvodder/.nuget/packages/",
+      "outputPath": "/Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/madsvodder/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "SoundFlow": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
+          "SoundFlow.Extensions.WebRtc.Apm": {
+            "target": "Package",
+            "version": "[1.0.4, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
