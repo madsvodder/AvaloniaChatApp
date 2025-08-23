@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[8.4.0, )"
             },
+            "Concentus": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "MessageBox.Avalonia": {
               "target": "Package",
               "version": "[3.2.0, )"

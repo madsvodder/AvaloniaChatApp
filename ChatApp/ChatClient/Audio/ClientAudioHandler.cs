@@ -1,8 +1,11 @@
 using System;
 using System.Buffers.Binary;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using ChatApp.Net;
+using Concentus.Enums;
+using Concentus.Structs;
 using SoundFlow.Abstracts.Devices;
 using SoundFlow.Backends.MiniAudio;
 using SoundFlow.Components;
@@ -26,10 +29,16 @@ public class ClientAudioHandler
     
     private Server _server;
     
+    private OpusEncoder _encoder;
+    
     private uint _seq;
     public ClientAudioHandler(Server server)
     {
         
+        _encoder = new OpusEncoder(48000, 1, OpusApplication.OPUS_APPLICATION_VOIP);
+        _encoder.Bitrate = 64000;
+        
+        // Server
         _server = server;
         
         // Initialize the engine
@@ -48,33 +57,28 @@ public class ClientAudioHandler
         {
             SampleRate = 48000,
             Channels = 1,
-            Format = SampleFormat.F32
+            Format = SampleFormat.S16
         };
         
         _defaultAudioCaptureDevice = _engine.InitializeCaptureDevice(_defaultCaptureDeviceInfo, _defaultAudioFormat);
         
-        //_defaultAudioCaptureDevice.OnAudioProcessed += DeviceOnOnAudioProcessed;
-        
-        //_defaultAudioCaptureDevice.Start();
-
-        _recorder = new Recorder(_defaultAudioCaptureDevice, ProcessAudio);
+        _defaultAudioCaptureDevice.OnAudioProcessed += DefaultAudioCaptureDeviceOnOnAudioProcessed;
         
         _defaultAudioCaptureDevice.Start();
-        _recorder.StartRecording();
     }
 
-    private void DeviceOnOnAudioProcessed(Span<float> samples, Capability capability)
+    private void DefaultAudioCaptureDeviceOnOnAudioProcessed(Span<float> samples, Capability capability)
     {
-        Console.WriteLine(samples.Length);
-        Console.WriteLine("Trying to sample audio");
-    }
-    
-    private void ProcessAudio(Span<float> samples, Capability capability)
-    {
-        // If you instead want 16-bit PCM on the wire, quantize here.
-        // For now: send float32 PCM bytes as-is.
-        ReadOnlySpan<byte> pcm = MemoryMarshal.AsBytes(samples);
-
+        Span<short> pcm = stackalloc short[samples.Length];
         
+        // Convert float samples (-1.0 to 1.0) to 16-bit PCM (short)
+        for (int i = 0; i < samples.Length; i++)
+            pcm[i] = (short)(samples[i] * short.MaxValue);
+
+        // Convert short[] to byte[] for network transmission
+        byte[] buffer = MemoryMarshal.AsBytes(pcm).ToArray();
+
+        if (_server.Status == Server.ConnectionStatus.Connected)
+            _server.sendAudioPacketsToServer(buffer, buffer.Length);
     }
 }

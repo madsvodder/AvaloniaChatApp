@@ -77,7 +77,7 @@ public class Server
             // Debug
             Console.WriteLine("Connected to server successfully.");
             
-            // Set connectiong status
+            // Set connection status
             SetStatus(ConnectionStatus.Connected);
         }
         catch (Exception ex)
@@ -96,9 +96,11 @@ public class Server
         _client.Client.Send(messagePacket.GetPacketBytes());
     }
 
-    public void sendAudioToServer()
+    public void sendAudioPacketsToServer(byte[] buffer, int bufferLength)
     {
-        
+        IPEndPoint _serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7891); // Replace with your server's IP and port
+        _udpClient.Send(buffer, bufferLength, _serverEndPoint);
+        Console.WriteLine("Sent audio packets to server.");
     }
 
     // Loop for reading packets - Depending on the opcode, do different stuff

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJn5vQmdpbU=",
+  "dgSpecHash": "ZTlj+WmgAYI=",
   "success": true,
   "projectFilePath": "/Users/madsvodder/Development/RiderProjects/ChatApp/ChatClient/ChatClient.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/Users/madsvodder/.nuget/packages/avalonia.win32/11.3.4/avalonia.win32.11.3.4.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/avalonia.x11/11.3.4/avalonia.x11.11.3.4.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/communitytoolkit.mvvm/8.4.0/communitytoolkit.mvvm.8.4.0.nupkg.sha512",
+    "/Users/madsvodder/.nuget/packages/concentus/2.2.2/concentus.2.2.2.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/dialoghost.avalonia/0.8.1/dialoghost.avalonia.0.8.1.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/harfbuzzsharp/8.3.1.1/harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/harfbuzzsharp.nativeassets.linux/8.3.1.1/harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
@@ -36,6 +37,8 @@
     "/Users/madsvodder/.nuget/packages/soundflow/1.2.1/soundflow.1.2.1.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/soundflow.extensions.webrtc.apm/1.0.4/soundflow.extensions.webrtc.apm.1.0.4.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
+    "/Users/madsvodder/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/Users/madsvodder/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/madsvodder/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512"
   ],
   "logs": []

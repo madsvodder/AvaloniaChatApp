@@ -87,3 +87,4 @@ C:/Users/Mads/RiderProjects/AvaloniaChatApp/ChatServer/obj/Debug/net9.0/ref/Chat
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/runtimes/win-x86/native/webrtc-apm.dll
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.csproj.AssemblyReference.cache
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/obj/Debug/net9.0/ChatServer.csproj.Up2Date
+/Users/madsvodder/Development/RiderProjects/ChatApp/ChatServer/bin/Debug/net9.0/Concentus.dll

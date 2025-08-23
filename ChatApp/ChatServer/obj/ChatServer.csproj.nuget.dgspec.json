@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Concentus": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "SoundFlow": {
               "target": "Package",
               "version": "[1.2.1, )"

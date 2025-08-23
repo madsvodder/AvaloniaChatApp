@@ -8,11 +8,24 @@
     ".NETCoreApp,Version=v9.0": {
       "ChatServer/1.0.0": {
         "dependencies": {
+          "Concentus": "2.2.2",
           "SoundFlow": "1.2.1",
           "SoundFlow.Extensions.WebRtc.Apm": "1.0.4"
         },
         "runtime": {
           "ChatServer.dll": {}
+        }
+      },
+      "Concentus/2.2.2": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/net8.0/Concentus.dll": {
+            "assemblyVersion": "2.2.2.0",
+            "fileVersion": "2.2.2.0"
+          }
         }
       },
       "SoundFlow/1.2.1": {
@@ -162,7 +175,9 @@
             "fileVersion": "0.0.0.0"
           }
         }
-      }
+      },
+      "System.Memory/4.5.4": {},
+      "System.Numerics.Vectors/4.5.0": {}
     }
   },
   "libraries": {
@@ -170,6 +185,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Concentus/2.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2B9YmHPKO+k7YpAAnqmiXwiMJnfjfj1C868RszOll2iZWLnGTAiC1q21L/d7CvTan7T+hyqU8dR0Dcy3cpjVfQ==",
+      "path": "concentus/2.2.2",
+      "hashPath": "concentus.2.2.2.nupkg.sha512"
     },
     "SoundFlow/1.2.1": {
       "type": "package",
@@ -184,6 +206,20 @@
       "sha512": "sha512-/mojmRD2uMY5t23bjeyU9n3bPotMdUSzOtc/Mc2X2rh1pbg0V38tJ+E9G0XuaJGzJcUo1zd3jjkz298ZbbXUcg==",
       "path": "soundflow.extensions.webrtc.apm/1.0.4",
       "hashPath": "soundflow.extensions.webrtc.apm.1.0.4.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     }
   }
 }

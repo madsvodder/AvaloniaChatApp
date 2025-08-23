@@ -12,6 +12,8 @@ class Program
     static TcpListener _listener;
     static UdpClient _udpServer;
     
+    static FileStream audioFile = new FileStream("received_audio.pcm", FileMode.Append, FileAccess.Write);
+    
     static void Main(String[] args)
     {
         // Create list for clients / users on the server
@@ -54,9 +56,21 @@ class Program
         Console.WriteLine("Listening for UDP packets...");
         while (true)
         {
+            /*
             byte[] data = _udpServer.Receive(ref remoteEp);
             string message = Encoding.UTF8.GetString(data);
-            Console.WriteLine(message);
+            Console.WriteLine(message);*/
+            
+            IPEndPoint ep = new IPEndPoint(IPAddress.Any, 7891);
+            byte[] data = _udpServer.Receive(ref ep);
+
+            Console.WriteLine($"Received {data.Length} bytes from {remoteEp}");
+
+            // Save PCM
+            audioFile.Write(data, 0, data.Length);
+            audioFile.Flush();
+            
+            Console.WriteLine($"Audio file path: {Path.GetFullPath("received_audio.pcm")}");
         }
     }
 

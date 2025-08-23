@@ -317,3 +317,4 @@ C:/Users/Mads/RiderProjects/AvaloniaChatApp/ChatClient/obj/Debug/net9.0/ChatClie
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatClient/bin/Debug/net9.0/runtimes/osx-x64/native/libwebrtc-apm.dylib
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatClient/bin/Debug/net9.0/runtimes/win-x64/native/webrtc-apm.dll
 /Users/madsvodder/Development/RiderProjects/ChatApp/ChatClient/bin/Debug/net9.0/runtimes/win-x86/native/webrtc-apm.dll
+/Users/madsvodder/Development/RiderProjects/ChatApp/ChatClient/bin/Debug/net9.0/Concentus.dll
